@@ -128,12 +128,7 @@ function Skills() {
               gap="5"
               align="center"
               wrap="wrap"
-              w={{
-                base: "70%",
-                md: "70%",
-                sm: "100%",
-                isSmallerThn300px: "100%",
-              }}
+              w={'70%'}
             >
               <Skill label="VISUAL STUDIO CODE" src={vscode} />
               <Skill label="NODE PACKAGE MANAGER" src={npm} />
