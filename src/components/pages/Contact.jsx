@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import roboLove from "../New folder/robo-love.svg";
 import { FaFacebookF, FaGithub, FaGooglePlusSquare, FaLinkedin, FaWhatsapp, MdSettings } from 'react-icons/fa'
 import { useMediaQuery } from '@chakra-ui/react'
+import { roboAnimation } from "../../utils/animation";
 function Contact() {
 
   const [isSmallerThn300px] = useMediaQuery('(min-width: 1280px)')
@@ -28,7 +29,7 @@ function Contact() {
                 w={"290px" }
                 objectFit="cover"
                 src={roboLove}
-                scaleX={"-1"}
+                animation={roboAnimation}
               />
             </Flex>
 

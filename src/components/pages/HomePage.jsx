@@ -1,17 +1,3 @@
-// import React from 'react'
-// import Navbar from '../layout/Navbar'
-
-// function HomePage() {
-//   return (
-//     <>
-//       <Navbar />
-
-//     </>
-//   )
-// }
-
-// export default HomePage
-
 import {
   Container,
   Stack,
@@ -27,11 +13,12 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+import { roboAnimation } from "../../utils/animation";
 import { about } from "../../utils/routes";
 import Navbar from "../layout/Navbar";
 import  roboHi  from "../New folder/robo-hi.svg";
 
-export default function CallToActionWithVideo() {
+export default function HomePage() {
   return (
     <>
       <Navbar />
@@ -114,6 +101,7 @@ export default function CallToActionWithVideo() {
               w={"100%"}
               h={"100%"}
               src={roboHi}
+              animation={roboAnimation}
             />
           </Flex>
         </Stack>

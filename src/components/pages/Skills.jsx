@@ -32,6 +32,7 @@ import roboStudy from "../New folder/robo-study.svg";
 import ui from "../New folder/ui.svg";
 import next from "../New folder/next.svg";
 import express from "../New folder/express.svg";
+import { roboAnimation } from "../../utils/animation";
 
 export function Skill({ label, src }) {
   return (
@@ -73,7 +74,7 @@ function Skills() {
               }}
               justify="center"
             >
-              <Image w="250px" objectFit="cover" src={roboGood} scaleX={"-1"} />
+              <Image w="250px" objectFit="cover" src={roboGood} scaleX={"-1"} animation={roboAnimation} />
             </Flex>
             <Flex
               justify="space-around"
@@ -121,6 +122,7 @@ function Skills() {
                 w="250px"
                 objectFit="cover"
                 src={roboGear}
+                animation={roboAnimation}
               />
             </Flex>
             <Flex
@@ -178,6 +180,7 @@ function Skills() {
                 objectFit="cover"
                 src={roboStudy}
                 scaleX={"-1"}
+                animation={roboAnimation}
               />
             </Flex>
             <Flex

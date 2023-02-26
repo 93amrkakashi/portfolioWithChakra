@@ -1,20 +1,3 @@
-// import { Container } from '@chakra-ui/react'
-// import React from 'react'
-// import Navbar from '../layout/Navbar'
-
-// function About() {
-//   return (
-//     <>
-//       <Navbar />
-//       <Container maxW={"7xl"}>
-
-//       </Container>
-//     </>
-//   )
-// }
-
-// export default About
-
 import {
   Stack,
   Container,
@@ -22,21 +5,16 @@ import {
   Flex,
   Text,
   Heading,
-  SimpleGrid,
   Image,
+  keyframes,
 } from "@chakra-ui/react";
+import { animation, roboAnimation } from "../../utils/animation";
 import Navbar from "../layout/Navbar";
-import {
-  Avatar,
-  Center,
-  Button,
-  Link,
-  Badge,
-  useColorModeValue,
-} from "@chakra-ui/react";
 import roboHero from "../New folder/robo-hero.svg";
 
-export default function StatsGridWithImage() {
+
+export default function About() {
+
   return (
     <>
       <Navbar />
@@ -98,6 +76,7 @@ export default function StatsGridWithImage() {
               w={"80%"}
               h={"100%"}
               src={roboHero}
+              animation={roboAnimation}
             />
           </Flex>
         </Stack>
@@ -160,85 +139,3 @@ export const studies = [
      It is the stage of transition beyond the basic language where there is a new world of development`,
   },
 ];
-
-// const StatsText = ({ children }) => (
-
-//   <Text as={'span'} fontWeight={700} color={'white'}>
-//     {children}
-//   </Text>
-// );
-
-// const stats = [
-//   {
-//     title: '10+',
-//     content: (
-//       <>
-//         <StatsText>Software modules</StatsText> for detailed monitoring and
-//         real-time analytics
-//       </>
-//     ),
-//   },
-//   {
-//     title: '24/7',
-//     content: (
-//       <>
-//         <StatsText>Analytics</StatsText> enabled right in your dashboard without
-//         history limitations
-//       </>
-//     ),
-//   },
-//   {
-//     title: '13%',
-//     content: (
-//       <>
-//         <StatsText>Farms</StatsText> in North America has chosen NewLife™ as
-//         their management solution
-//       </>
-//     ),
-//   },
-//   {
-//     title: '250M+',
-//     content: (
-//       <>
-//         <StatsText>Plants</StatsText> currently connected and monitored by the
-//         NewLife™ software
-//       </>
-//     ),
-//   },
-// ];
-
-// export function SocialProfileSimple() {
-//   return (
-//     <Flex
-//       maxW={"320px"}
-//       w={"full"}
-//       bg={useColorModeValue("white", "gray.900")}
-//       boxShadow={"2xl"}
-//       rounded={"lg"}
-//       p={6}
-//       textAlign={"center"}
-//       flexDir="column"
-//       align="center"
-//     >
-//       <Image
-//         // borderRadius='full'
-//         boxSize="90px"
-//         src={"https://cdn-icons-png.flaticon.com/512/174/174854.png"}
-//         mb={1}
-//         pos={"relative"}
-//       />
-//       <Heading fontSize={"2xl"} fontFamily={"body"}>
-//         HTML5
-//       </Heading>
-
-//       <Text
-//         textAlign={"center"}
-//         color={useColorModeValue("gray.700", "gray.400")}
-//         px={3}
-//       >
-//         The first thing I started with was HTML. it didn't take much time to
-//         learn the basics, but diving into the language more took some time.
-//       </Text>
-//     </Flex>
-//   );
-// }
