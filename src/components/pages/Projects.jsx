@@ -1,20 +1,25 @@
-import React, { useEffect, useState } from 'react'
-import Navbar from '../layout/Navbar'
-import { Flex, Image, Stack } from "@chakra-ui/react";
-import Repo from '../layout/Repo';
-
+import React, { useEffect, useState } from "react";
+import Navbar from "../layout/Navbar";
+import { Flex, Image, Stack, useColorModeValue } from "@chakra-ui/react";
+import Repo from "../layout/Repo";
 
 function Projects() {
-
   return (
-    <div>
+    <>
       <Navbar />
-      <Flex align='center' justify='center' gap='5' wrap='wrap' margin='8'>
+      <Flex
+        align="center"
+        justify="center"
+        wrap="wrap"
+        p="8"
+        w='100%'
+        gap='5'
+        bg={useColorModeValue("gray.200", "gray.700")}
+      >
         <Repo />
       </Flex>
-    </div>
-  )
+    </>
+  );
 }
 
-export default Projects
-
+export default Projects;

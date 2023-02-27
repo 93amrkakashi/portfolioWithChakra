@@ -1,33 +1,67 @@
 import React from "react";
 import Navbar from "../layout/Navbar";
-import { Box, Flex, Image, Stack, Text, Icon } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Image,
+  Stack,
+  Text,
+  Icon,
+  Center,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import roboLove from "../New folder/robo-love.svg";
-import { FaFacebookF, FaGithub, FaGooglePlusSquare, FaLinkedin, FaWhatsapp, MdSettings } from 'react-icons/fa'
-import { useMediaQuery } from '@chakra-ui/react'
+import {
+  FaFacebookF,
+  FaGithub,
+  FaGooglePlusSquare,
+  FaLinkedin,
+  FaWhatsapp,
+  MdSettings,
+} from "react-icons/fa";
+import { useMediaQuery } from "@chakra-ui/react";
 import { roboAnimation } from "../../utils/animation";
 function Contact() {
-
-  const [isSmallerThn300px] = useMediaQuery('(min-width: 1280px)')
+  const [isSmallerThn300px] = useMediaQuery("(max-width: 300px)");
   return (
-    <div>
+    <>
       <Navbar />
-      <Stack w="100%" minH="100vh">
-        <Box w="100%">
-          <Text fontSize="40" fontWeight="700" textAlign="center" h="90px">
-            Contact me through
-          </Text>
+      <Stack
+        w="100%"
+        minH="100vh"
+        bg={useColorModeValue("gray.200", "gray.700")}
+      >
+        <Box w="100%" pos={"relative"}>
+          <Center
+            className="text"
+            fontSize="90"
+            fontWeight="700"
+            textAlign="center"
+            h="90px"
+            pos={"absolute"}
+            top="50%"
+            w="100%"
+            zIndex="0"
+            color={useColorModeValue("gray.300", "gray.800")}
+            letterSpacing="1.5"
+          >
+            CONTACT ME
+          </Center>
           <Flex
+            className="contact"
             align="center"
             justify="center"
             wrap="wrap"
-            // flexDir={{ md: "row", sm: "column" }} // dont forget to make extra small
+            my="5"
+            flexDir={{ md: "row", sm: "column" }} // dont forget to make extra small
           >
-            <Flex w={{ base: "40%", md: "40%", sm: "100%",isSmallerThn300px:'100%' }} justify="center">
+            <Flex w={{  md: "40%", sm: "100%" }} justify="center">
               <Image
                 className="robo"
-                w={"290px" }
+                w={"85%"}
                 objectFit="cover"
+                zIndex="5"
                 src={roboLove}
                 animation={roboAnimation}
               />
@@ -37,8 +71,9 @@ function Contact() {
               justify="center"
               align="center"
               wrap="wrap"
-              w={{ base: "60%", md: "60%", sm: "100%" ,isSmallerThn300px:'100%'}}
-              gap="8"
+              w={{  md: "60%", sm: "100%" }}
+              // gap="8"
+              zIndex="5"
             >
               {socials.map((social) => (
                 <Box
@@ -52,12 +87,14 @@ function Contact() {
                   align="center"
                   justify="space-around"
                   flexDir="column"
+                  boxShadow="xl"
                   p="5"
                   w="200px"
                   minH="200px"
+                  m="3"
                 >
-                  <Box fontSize='35' color={"blue.400"}>
-                  {social.icon}
+                  <Box fontSize="35" color={"blue.400"}>
+                    {social.icon}
                   </Box>
                   {/* <Icon as={MdSettings} /> */}
                   <Text>{social.name}</Text>
@@ -68,7 +105,7 @@ function Contact() {
           </Flex>
         </Box>
       </Stack>
-    </div>
+    </>
   );
 }
 

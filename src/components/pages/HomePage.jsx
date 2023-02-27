@@ -22,7 +22,7 @@ export default function HomePage() {
   return (
     <>
       <Navbar />
-      <Container maxW={"7xl"}>
+      <Container maxW={"7xl"} bg={useColorModeValue("gray.200", "gray.700")} >
         <Stack
           align={"center"}
           spacing={{ base: 8, md: 10 }}
@@ -59,9 +59,9 @@ export default function HomePage() {
                 Amr Ali
               </Text>
             </Heading>
-            <Text color={"black.400"}>
+            <Text colorScheme={"facebook"} fontSize='22' >
               A React.js Frontend Web Developer, I'm a rising talent in the web
-              development world, I have a passion for developing and designing
+              development world. <br /> I have a passion for developing and designing
               web applications and exploring more in this world that I love.
               <br />I like using React to build responsive websites that are
               responsive to all screens, and I have a constant thirst for

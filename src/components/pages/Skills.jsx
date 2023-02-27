@@ -5,6 +5,7 @@ import {
   Stack,
   Text,
   Tooltip,
+  useColorModeValue,
   useMediaQuery,
 } from "@chakra-ui/react";
 import React from "react";
@@ -48,7 +49,7 @@ function Skills() {
   return (
     <div>
       <Navbar />
-      <Stack>
+      <Stack bg={useColorModeValue("gray.200", "gray.700")} >
         <Box w="100%" minH="90vh" p="8" marginBottom="20px">
           <Text
             fontSize={{ sm: "30" }}

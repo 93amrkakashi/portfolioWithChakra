@@ -7,6 +7,7 @@ import {
   Heading,
   Image,
   keyframes,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { animation, roboAnimation } from "../../utils/animation";
 import Navbar from "../layout/Navbar";
@@ -18,7 +19,7 @@ export default function About() {
   return (
     <>
       <Navbar />
-      <Container maxW={"7xl"} my="5">
+      <Container maxW={"7xl"} bg={useColorModeValue("gray.200", "gray.700")} py="5">
         <Stack
           align={"center"}
           spacing={{ base: 8, md: 10 }}
@@ -93,6 +94,7 @@ export default function About() {
               border="1px"
               borderRadius={"lg"}
               p="5"
+              m='5'
             >
               <Box
                 as={"i"}

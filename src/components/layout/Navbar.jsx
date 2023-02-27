@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { about, contact, home, projects, skills } from "../../utils/routes";
 
 import React from "react";
@@ -19,7 +19,10 @@ import React from "react";
 export function Links() {
   return (
     <>
-      <Box as={Link} to={about} fontSize="15" fontWeight="bold">
+    <Box as={NavLink} to={home} fontSize="15" fontWeight="bold">
+        Home
+      </Box>
+      <Box as={NavLink} to={about} fontSize="15" fontWeight="bold">
         About
       </Box>
       <Box as={Link} to={skills} fontSize="15" fontWeight="bold">
@@ -39,7 +42,7 @@ export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <Box bg={useColorModeValue("gray.100", "gray.900")} px={4} pos='sticky' top='0' left={'0'} zIndex='10000000'>
+    <Box bg={useColorModeValue("gray.400", "gray.900")} px={4} pos='sticky' top='0' left={'0'} zIndex='10000000'>
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
         <IconButton
           size={"md"}
