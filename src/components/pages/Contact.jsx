@@ -89,8 +89,8 @@ function Contact() {
                   flexDir="column"
                   boxShadow="xl"
                   p="5"
-                  w="200px"
-                  minH="200px"
+                  w="210px"
+                  minH="220px"
                   m="3"
                 >
                   <Box fontSize="35" color={"blue.400"}>

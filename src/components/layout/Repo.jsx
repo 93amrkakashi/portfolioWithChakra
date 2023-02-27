@@ -44,6 +44,7 @@ function Repo() {
             maxW="260px"
             minH="270px"
             px="2"
+            m='3'
             textAlign={"center"}
             boxShadow="xl"
           >
