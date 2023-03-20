@@ -42,7 +42,7 @@ export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <Box bg={useColorModeValue("gray.400", "gray.900")} px={4} pos='sticky' top='0' left={'0'} zIndex='10000000'>
+    <Box w='100%' bg={useColorModeValue("gray.400", "gray.900")} px={4} pos='sticky' top='0' left={'0'} zIndex='10000000'>
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
         <IconButton
           size={"md"}

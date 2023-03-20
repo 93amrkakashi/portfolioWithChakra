@@ -33,6 +33,9 @@ import roboStudy from "../New folder/robo-study.svg";
 import ui from "../New folder/ui.svg";
 import next from "../New folder/next.svg";
 import express from "../New folder/express.svg";
+import boot from "../New folder/boot.svg";
+import word from "../New folder/word.svg";
+import pug from "../New folder/pug.svg";
 import { roboAnimation } from "../../utils/animation";
 
 export function Skill({ label, src }) {
@@ -89,6 +92,9 @@ function Skills() {
               <Skill label="JAVA SCRIPT" src={js} />
               <Skill label="SASS" src={sass} />
               <Skill label="REACT JS" src={react} />
+              <Skill label="NEXT JS" src={next} />
+              <Skill label="REDUX & REDUX TOOLKIT" src={redux} />
+
             </Flex>
           </Flex>
         </Box>
@@ -140,9 +146,10 @@ function Skills() {
               <Skill label="GIT HUB" src={github} />
               <Skill label="FIREBASE" src={fire} />
               <Skill label="GULP JS" src={gulp} />
-              <Skill label="REDUX & REDUX TOOLKIT" src={redux} />
+              <Skill label="PUG JS" src={pug} />
               <Skill label="CHAKRA UI" src={chakra} />
               <Skill label="MATERIAL UI" src={mat} />
+              <Skill label="BOOTSTRAP 5" src={boot} />
             </Flex>
           </Flex>
         </Box>
@@ -199,7 +206,7 @@ function Skills() {
               <Skill label="TYPE SCRIPT" src={ts} />
               <Skill label="NODE JS" src={node} />
               <Skill label="EXPRESS JS" src={express} />
-              <Skill label="NEXT JS" src={next} />
+              <Skill label="WORDPRESS" src={word} />
               <Skill label="UI UX" src={ui} />
             </Flex>
           </Flex>
